@@ -1,0 +1,29 @@
+CIRCUIT DESCRIPTION
+
+
+Our circuit starts with the DTMF Decoder IC with the mobile phone connected to it,
+the other mobile phone wirelessly connects the phone connected to the IC through the phone call and
+then delivers some dial code according to our requirement for switching on/off appliances.
+
+Then the output from the Decoder IC (q1, q2, q3, q4 - these outputs depends upon the input that is received from mobile phone) 
+goes to the Inverter IC 74LS04 which acts as a buffer for the output of DTMF IC.
+
+Then the four outputs from the Inverter IC go to the Digital Input Pins of the Arduino Uno.
+
+Arduino Uno is the brain of our Project and all the coding that runs our project is burned in the Arduino Uno.
+
+Then according to our code, Five Digital outputs from Arduino Uno go to the various devices which are to be operated
+through the mobile phone.
+
+Here we are using 3 LEDs as Digital outputs which are operating on 5V,
+One AC source and one 36V DC source.
+
+Operations of devices
+
+1.LED 1, 2, 3 
+
+Directly through Digital output pins of Arduino (5V)
+
+2.AC Sources and DC Sources
+ First outputs from Digital Output pins of Arduino goes to the MOTOR DRIVER IC which is used to amplify 5V to 9V.
+Then the output from the MOTOR DRIVER IC goes to Relays which are used as switching devices.
