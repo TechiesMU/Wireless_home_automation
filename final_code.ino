@@ -2,11 +2,12 @@
 #define D1 9
 #define D2 10
 #define D3 11
-#define yellow_led 5
-#define red_led 6
-#define green_led 7
-#define ac_relay 4
-#define dc_relay 3
+#define yellow_led 2
+#define red_led 3
+#define green_led 4
+#define ac_relay 5
+#define dc_relay 6
+#define dc_relay2 7
 
 void device_1()
 {
@@ -27,6 +28,7 @@ void device_4()
 void device_5()
 {
    digitalWrite(dc_relay,HIGH);
+   digitalWrite(dc_relay2,HIGH);
 }
 void Stop()
 {
@@ -35,6 +37,7 @@ void Stop()
    digitalWrite(yellow_led,LOW);
    digitalWrite(ac_relay,LOW);
    digitalWrite(dc_relay,LOW);
+   digitalWrite(dc_relay2,LOW);
 }
 void setup() 
 {
@@ -47,6 +50,7 @@ void setup()
   pinMode(yellow_led, OUTPUT);
   pinMode(red_led, OUTPUT);
   pinMode(green_led, OUTPUT);
+  pinMode(dc_relay2, OUTPUT);
   
 }
 
